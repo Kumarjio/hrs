@@ -172,11 +172,12 @@ class DashboardController extends Controller
             $color = '#133edb';
             $events[] = array('title' => $title, 'start' => $start, 'color' => $color);
         }
+        // @todo: fix work anniversary for calendar
         foreach($work_anniversaries as $work_anniversary){
-            $start = date('Y').'-'.date('m-d',strtotime($work_anniversary->date_of_joining));
-            $title = trans('messages.work_anniversary').' : '.$work_anniversary->User->full_name_with_designation;
+            /* $start = date('Y').'-'.date('m-d',strtotime($work_anniversary->date_of_joining));
+            $title = trans('messages.work_anniversary').' : '; $work_anniversary->User->full_name_with_designation;
             $color = '#8B1A1A';
-            $events[] = array('title' => $title, 'start' => $start, 'color' => $color);
+            $events[] = array('title' => $title, 'start' => $start, 'color' => $color); */
         }
         foreach($holidays as $holiday){
             $start = $holiday->date;

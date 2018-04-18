@@ -161,11 +161,6 @@
 									<ul class="dropdown-menu animated half flipInX">
 										<li><a href="/profile">{!! trans('messages.my').' '.trans('messages.profile') !!}</a></li>
 										<li><a href="#" data-href="/change-password" data-toggle='modal' data-target='#myModal'>{!! trans('messages.change_password') !!}</a></li>
-										@if(config('code.mode') && defaultRole())
-										<li><a href="#" data-href="/check-update" data-toggle='modal' data-target='#myModal'>{!! trans('messages.check').' '.trans('messages.update') !!}</a></li>
-										<li><a href="/release-license">{!! trans('messages.release_license') !!}</a></li>
-										<li><a href="#" data-href="/whats-new" data-toggle="modal" data-target="#myModal"><strong>Whats New in 3.1?</strong></a></li>
-										@endif
 										<li><a href="/logout">{!! trans('messages.logout') !!}</a></li>
 									</ul>
 								</li>
